@@ -1,0 +1,26 @@
+{
+  "name": "Project-2-Lounge",
+  "version": "1.0.0",
+  "description": "The Lounge is a web based casino application with unique items tied to your accounts; allowing for all of your nefarious gambling activities. Provided to you by MCL",
+  "main": "server.js",
+  "dependencies": {
+    "mysql": "^2.17.1",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leeumt8/Project-2-Lounge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leeumt8/Project-2-Lounge/issues"
+  },
+  "homepage": "https://github.com/leeumt8/Project-2-Lounge#readme"
+}
