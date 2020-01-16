@@ -42,8 +42,5 @@
             "error",
             "always"
         ]
-    },
-    "plugins": [
-        "mocha"
-    ]
+    }
   }
