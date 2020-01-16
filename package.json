@@ -4,6 +4,7 @@
   "description": "The Lounge is a web based casino application with unique items tied to your accounts; allowing for all of your nefarious gambling activities. Provided to you by MCL",
   "main": "server.js",
   "dependencies": {
+    "eslint": "^6.8.0",
     "mysql": "^2.17.1",
     "sequelize": "^5.21.3"
   },
@@ -12,7 +13,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "lint": "eslint \"./**/*.js\""
+    "lint": "eslint **/*.js"
   },
   "repository": {
     "type": "git",
