@@ -7,13 +7,11 @@
     "eslint": "^6.8.0",
     "mysql": "^2.17.1",
     "nvm": "0.0.4",
-    "sequelize": "^5.21.3"
-  },
-  "devDependencies": {
-    "eslint-plugin-mocha": "^6.2.2",
-    "mocha": "^7.0.0"
+    "sequelize": "^5.21.3",
+    "travis": "^0.1.1"
   },
   "scripts": {
+    "pretest": "eslint --ignore-path .gitignore .",
     "test": "mocha",
     "lint": "eslint **/*.js"
   },
