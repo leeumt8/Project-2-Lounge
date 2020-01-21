@@ -17,4 +17,7 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../forgotpassword.html"));
     });
 
+    app.get("/account", function (req, res) {
+        res.sendFile(path.join(__dirname, "../accountview.html"));
+    });
 };
