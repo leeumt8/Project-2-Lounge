@@ -20,4 +20,8 @@ module.exports = function (app) {
     app.get("/account", function (req, res) {
         res.sendFile(path.join(__dirname, "../accountview.html"));
     });
+
+    app.get("/coinflip", function (req, res) {
+        res.sendFile(path.join(__dirname, "../coinflip.html"));
+    });
 };
