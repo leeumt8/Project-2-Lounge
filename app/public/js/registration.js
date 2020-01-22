@@ -12,7 +12,7 @@ $("#newSubmit").on("click", function(event) {
         .then(function(data) {
             console.log(data);
         });
-    $("#newUsername").val();
-    $("#newPassword").val();
-    $("#newEmail").val();
+    $("#newUsername").val("");
+    $("#newPassword").val("");
+    $("#newEmail").val("");
 });

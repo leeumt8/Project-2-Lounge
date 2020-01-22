@@ -1,6 +1,7 @@
 // server.js is the initial starting point for node/express server
 
 var express = require("express");
+var session = require("express-session");
 
 // express app setup
 var app = express();
@@ -8,6 +9,13 @@ var PORT = process.env.PORT || 8080;
 
 //requiring models for syncing
 // var db = require("./models");
+
+//initializing express session
+app.use(session({
+    secret: "secretpass",
+    resave: false,
+    saveUninitialized: false
+}));
 
 //setting up express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
