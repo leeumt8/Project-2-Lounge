@@ -26,7 +26,7 @@ app.use(express.json());
 // app.use("/register", require("./app/routes/registration-api-routes"));
 
 //static directory
-app.use(express.static(__dirname + "/app/public"));
+app.use(express.static(__dirname + "/app/public", {index: "login.html"}));
 
 //routes
 require("./app/routes/registration-api-routes")(app);
