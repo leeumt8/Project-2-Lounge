@@ -13,11 +13,15 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// user routes requirements
+// app.use("/", require("./app/routes/registration-api-routes"));
+// app.use("/register", require("./app/routes/registration-api-routes"));
+
 //static directory
 app.use(express.static(__dirname + "/app/public"));
 
 //routes
-// require("./app/routes/new-user-api-routes")(app);
+require("./app/routes/registration-api-routes")(app);
 require("./app/routes/html-routes")(app);
 
 //syncing sequelize models and then starting the express app
@@ -27,6 +31,14 @@ require("./app/routes/html-routes")(app);
 //    });
 // });
 // temp express app until sequelize models are working
+
+//sequelize db connection test
+const sequelize = require("./config/connection.js");
+
+sequelize.authenticate()
+    .then(() => console.log("DB connected"))
+    .catch(err => console.log("Error: " + err));
+
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });

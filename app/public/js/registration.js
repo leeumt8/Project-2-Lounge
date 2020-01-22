@@ -1,18 +1,18 @@
-$(document).ready(function() {
-    //references to the registration inputs
-    var nameInput = $("#newUsername");
-    var passInput = $("#newPassword");
-    var emailInput = $("#newEmail");
+// this code handles what happens when the  user clicks on the submit button when creating their account
+$("#newSubmit").on("click", function(event) {
+    event.preventDefault();
 
-    //event listener for submit button
-    $(document).on("click", "#newSubmit", handleNewUserForm);
+    var newUser = {
+        user_name: $("#newUsername").val().trim(),
+        user_password: $("#newPassword").val().trim(),
+        user_email: $("#newEmail").val().trim()
+    };
 
-    //function to handle the new user form submission
-    function handleNewUserForm(event) {
-        event.preventDefault();
-        // make sure all fields are filled out
-        if (!nameInput.val().trim().trim() || !passInput.val().trim().trim() || !emailInput.val().trim().trim()) {
-            return;
-        }
-    }
+    $.post("/register", newUser)
+        .then(function(data) {
+            console.log(data);
+        });
+    $("#newUsername").val();
+    $("#newPassword").val();
+    $("#newEmail").val();
 });
